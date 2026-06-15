@@ -10,8 +10,10 @@
   body { margin:0; background:var(--bg); color:var(--txt); font:14px/1.6 -apple-system,Segoe UI,Roboto,Arial,sans-serif; }
   .wrap { max-width:900px; margin:0 auto; padding:24px 18px 60px; }
   h1 { font-size:21px; margin:0 0 4px; }
-  h2 { font-size:15px; margin:26px 0 10px; border-bottom:1px solid var(--line); padding-bottom:6px; }
+  h2 { font-size:16px; margin:30px 0 6px; }
+  h3 { font-size:14px; margin:22px 0 8px; color:var(--txt); border-bottom:1px solid var(--line); padding-bottom:6px; }
   .sub { color:var(--muted); font-size:13px; }
+  .tagline { color:var(--blue); font-size:12px; margin:2px 0 0; }
   .muted { color:var(--muted); } .small { font-size:12px; }
   table { width:100%; border-collapse:collapse; font-size:13px; margin:8px 0; }
   th { text-align:right; color:var(--muted); font-weight:500; border-bottom:1px solid var(--line); padding:7px 8px; background:#11151c; }
@@ -26,9 +28,12 @@
 </style></head><body>
 <div class="wrap">
   <h1>NQ Systematic — Backtest Detail</h1>
-  <div class="sub">NQ futures, 5-min bars · 2020-12-30 → 2026-06-03 · 1,390 trades · size 1 NQ (= 10 MNQ) · simulated</div>
+  <div class="sub">Two uncorrelated NQ strategies · ~5-year simulated backtests · 1-min bars · net of realistic costs</div>
 
-  <h2>Headline results</h2>
+  <h2>Strategy A <span class="muted small">· NQ intraday</span></h2>
+  <div class="sub">2020-12-30 → 2026-06-03 · 1,390 trades · size 1 NQ (= 10 MNQ)</div>
+
+  <h3>Headline results</h3>
   <table>
     <tr><th>Metric</th><th>Value</th></tr>
     <tr><td>Trades</td><td>1,390</td></tr>
@@ -40,7 +45,7 @@
     <tr><td>Annualized (~5.4y)</td><td class="pos">$+28,839/yr</td></tr>
   </table>
 
-  <h2>Per-year performance</h2>
+  <h3>Per-year performance</h3>
   <table>
     <tr><th>Year</th><th>Trades</th><th>PF</th><th>Win %</th><th>Net</th></tr>
     <tr><td>2021</td><td>201</td><td>1.05</td><td>49.8%</td><td class="pos">$+3,440</td></tr>
@@ -51,7 +56,7 @@
     <tr><td>2026</td><td>109</td><td>1.59</td><td>51.4%</td><td class="pos">$+28,365</td></tr>
   </table>
 
-  <h2>Bootstrap 95% confidence intervals</h2>
+  <h3>Bootstrap 95% confidence intervals</h3>
   <p class="small muted">10,000 resamples; daily Sharpe uses a multi-day block bootstrap for serial correlation.</p>
   <table>
     <tr><th>Metric</th><th>Observed</th><th>5% bound</th><th>95% bound</th><th>P(&gt; reference)</th></tr>
@@ -60,54 +65,97 @@
     <tr><td>Net (5y)</td><td>$+155,730</td><td>$+88,510</td><td>$+223,546</td><td>P(Net&gt;0) = 100.0%</td></tr>
   </table>
 
-  <h2>Equity curve (weekly)</h2>
+  <h3>Equity curve (weekly)</h3>
   <div class="chart">
     <svg viewBox="0 0 900 300" width="100%" height="300" role="img"
-         aria-label="Cumulative simulated P&amp;L rising from near zero to about $161k over 2021 to 2026">
+         aria-label="Strategy A cumulative simulated P&amp;L rising from near zero to about $161k over 2021 to 2026">
       <text x="10" y="20" font-size="12" fill="#8b949e">Cumulative P&amp;L (USD, 1 NQ = 10 MNQ)</text>
       <polyline fill="none" stroke="#3fb950" stroke-width="2" points="50,275 53,275 56,275 59,280 62,279 64,279 67,279 70,271 73,268 76,269 79,269 82,271 85,268 88,267 91,268 93,273 96,273 99,275 102,276 105,276 108,276 111,273 114,273 117,272 120,273 122,273 125,271 128,272 131,266 134,267 137,267 140,267 143,269 146,267 149,264 151,265 154,261 157,261 160,259 163,260 166,259 169,258 172,259 175,259 177,260 180,260 183,266 186,270 189,269 192,270 195,267 198,269 201,268 204,270 206,271 209,270 212,272 215,274 218,272 221,272 224,276 227,273 230,272 233,265 235,262 238,264 241,262 244,263 247,260 250,258 253,254 256,254 259,256 262,247 264,250 267,249 270,249 273,251 276,247 279,245 282,240 285,242 288,248 290,248 293,243 296,244 299,244 302,242 305,240 308,240 311,239 314,238 317,239 319,238 322,235 325,234 328,233 331,228 334,230 337,234 340,233 343,233 346,234 348,234 351,235 354,234 357,234 360,229 363,231 366,231 369,226 372,224 375,224 377,220 380,219 383,211 386,212 389,211 392,212 395,213 398,213 401,212 403,211 406,211 409,209 412,208 415,201 418,200 421,198 424,201 427,197 430,196 432,200 435,205 438,210 441,211 444,213 447,211 450,210 453,212 456,212 459,211 461,210 464,208 467,210 470,205 473,202 476,202 479,199 482,196 485,196 488,197 490,195 493,190 496,190 499,189 502,192 505,194 508,193 511,189 514,183 517,181 519,181 522,187 525,187 528,185 531,184 534,180 537,181 540,178 543,172 545,168 548,170 551,173 554,170 557,169 560,172 563,171 566,163 569,163 572,163 574,172 577,164 580,163 583,169 586,171 589,173 592,171 595,171 598,181 601,178 603,182 606,178 609,167 612,166 615,165 618,158 621,159 624,161 627,159 630,158 632,162 635,155 638,154 641,153 644,155 647,151 650,144 653,136 656,134 658,138 661,138 664,136 667,132 670,123 673,124 676,129 679,132 682,133 685,131 687,131 690,131 693,131 696,130 699,126 702,127 705,121 708,118 711,114 714,110 716,111 719,110 722,110 725,110 728,107 731,103 734,105 737,105 740,107 743,106 745,105 748,101 751,98 754,99 757,99 760,98 763,96 766,87 769,86 771,81 774,79 777,85 780,82 783,92 786,82 789,84 792,87 795,88 798,94 800,90 803,89 806,86 809,89 812,90 815,95 818,92 821,89 824,90 827,85 829,83 832,85 835,86 838,83 841,82 844,81 847,74 850,67 853,67 856,62 858,57 861,44 864,40 867,41 870,48"/>
       <line x1="50" y1="274" x2="870" y2="274" stroke="#30363d" stroke-dasharray="4 4"/>
       <text x="2" y="284" font-size="10" fill="#8b949e">$-4k</text>
       <text x="2" y="164" font-size="10" fill="#8b949e">$78k</text>
       <text x="2" y="44" font-size="10" fill="#8b949e">$161k</text>
-      <text x="50" y="296" font-size="10" fill="#8b949e">2021-01-08</text>
-      <text x="450" y="296" font-size="10" fill="#8b949e">2023-09-29</text>
-      <text x="815" y="296" font-size="10" fill="#8b949e">2026-06-12</text>
+      <text x="50" y="296" font-size="10" fill="#8b949e">2021-01</text>
+      <text x="440" y="296" font-size="10" fill="#8b949e">2023-09</text>
+      <text x="815" y="296" font-size="10" fill="#8b949e">2026-06</text>
+    </svg>
+  </div>
+
+  <h2>Strategy B <span class="muted small">· NQ intraday</span></h2>
+  <div class="sub">2021-01-04 → 2026-05-29 · 1,388 trades · size 1 NQ · returns shown on $600k notional</div>
+
+  <h3>Headline results</h3>
+  <table>
+    <tr><th>Metric</th><th>Value</th></tr>
+    <tr><td>Trades</td><td>1,388</td></tr>
+    <tr><td>Profit factor</td><td>1.28</td></tr>
+    <tr><td>Sharpe (daily)</td><td class="pos">+1.23</td></tr>
+    <tr><td>Win rate</td><td>34.2%</td></tr>
+    <tr><td>APR (simple)</td><td class="pos">+8.1%</td></tr>
+    <tr><td>Total return (5.4y)</td><td class="pos">+43.5%</td></tr>
+    <tr><td>Max drawdown</td><td class="neg">-5.9% ($-35,137)</td></tr>
+    <tr><td>Expectancy</td><td class="pos">+$188/trade</td></tr>
+  </table>
+
+  <h3>Per-year performance</h3>
+  <table>
+    <tr><th>Year</th><th>Trades</th><th>PF</th><th>Net</th><th>Return %</th><th>Max DD %</th></tr>
+    <tr><td>2021</td><td>257</td><td>1.24</td><td class="pos">$+30,469</td><td class="pos">+5.1%</td><td class="neg">-2.4%</td></tr>
+    <tr><td>2022</td><td>257</td><td>1.37</td><td class="pos">$+75,959</td><td class="pos">+12.7%</td><td class="neg">-5.0%</td></tr>
+    <tr><td>2023</td><td>257</td><td>1.22</td><td class="pos">$+28,409</td><td class="pos">+4.7%</td><td class="neg">-3.2%</td></tr>
+    <tr><td>2024</td><td>257</td><td>1.60</td><td class="pos">$+82,594</td><td class="pos">+13.8%</td><td class="neg">-2.8%</td></tr>
+    <tr><td>2025</td><td>256</td><td>1.15</td><td class="pos">$+32,965</td><td class="pos">+5.5%</td><td class="neg">-5.9%</td></tr>
+    <tr><td>2026 <span class="muted small">(YTD)</span></td><td>104</td><td>1.11</td><td class="pos">$+10,684</td><td class="pos">+1.8%</td><td class="neg">-2.6%</td></tr>
+  </table>
+
+  <h3>Equity curve (annual)</h3>
+  <div class="chart">
+    <svg viewBox="0 0 900 300" width="100%" height="300" role="img"
+         aria-label="Strategy B cumulative simulated P&amp;L rising from zero to about $261k over 2021 to 2026">
+      <text x="10" y="20" font-size="12" fill="#8b949e">Cumulative P&amp;L (USD, 1 NQ on $600k notional)</text>
+      <polyline fill="none" stroke="#58a6ff" stroke-width="2" points="50,275 187,248 323,181 460,156 597,83 733,53 870,44"/>
+      <line x1="50" y1="275" x2="870" y2="275" stroke="#30363d" stroke-dasharray="4 4"/>
+      <text x="2" y="285" font-size="10" fill="#8b949e">$0</text>
+      <text x="2" y="164" font-size="10" fill="#8b949e">$130k</text>
+      <text x="2" y="48" font-size="10" fill="#8b949e">$261k</text>
+      <text x="50" y="296" font-size="10" fill="#8b949e">2021</text>
+      <text x="455" y="296" font-size="10" fill="#8b949e">2024</text>
+      <text x="845" y="296" font-size="10" fill="#8b949e">2026</text>
     </svg>
   </div>
 
   <h2>Sober forward expectations</h2>
   <div class="note">
-    <strong>The backtest is heavily bull-tilted</strong> — most of the sample fell in rising markets, so forward
+    <strong>Both backtests are bull-tilted</strong> — most of each sample fell in rising markets, so forward
     expectations are deliberately haircut for selection bias:
     <ul>
-      <li><strong>Annualized:</strong> backtest ~$30k/yr → sober forward $15–25k/yr (1 NQ / 10 MNQ)</li>
-      <li><strong>Sharpe:</strong> backtest +1.94 → sober forward 0.8–1.3</li>
-      <li><strong>Max DD:</strong> backtest −$15k → sober worst-case −$30–40k</li>
+      <li><strong>Returns:</strong> expect roughly half the backtested annual figures live.</li>
+      <li><strong>Sharpe:</strong> backtested ~1.2–1.9 → sober forward ~0.8–1.3.</li>
+      <li><strong>Drawdown:</strong> plan for ~2× the backtested max drawdown.</li>
     </ul>
-    <strong>Pre-registered kill criteria:</strong> retire the deployment if any of — 6-month forward Sharpe &lt; 0,
+    <strong>Pre-registered kill criteria:</strong> retire a deployment if any of — 6-month forward Sharpe &lt; 0,
     OR profit factor &lt; 1.05, OR realized max drawdown &gt; 2× backtest.
   </div>
 
   <h2>Validation tests passed</h2>
   <ol>
-    <li>Walk-forward (train early years, test later years): out-of-sample profit factor (1.38) <em>stronger</em> than in-sample (1.30).</li>
+    <li>Walk-forward (train early years, test later years): out-of-sample profit factor <em>stronger</em> than in-sample.</li>
     <li>Sensitivity: deliberately scrambling the logic collapses returns to ~$0 — confirms the edge is real, not curve-fit.</li>
-    <li>Bootstrap 95% CIs: PF [1.19, 1.53], Sharpe [+1.19, +2.82], Net [+$89.7k, +$221.4k].</li>
+    <li>Bootstrap 95% CIs exclude break-even on profit factor, Sharpe and net P&amp;L.</li>
     <li>Beats simpler baselines on Sharpe, net P&amp;L and drawdown simultaneously.</li>
-    <li>Sub-period stability: positive across most market conditions (the rarest condition needs more forward data).</li>
+    <li>The two strategies are nearly uncorrelated, so combining them raises the portfolio Sharpe above either alone.</li>
   </ol>
 
   <h2>Honest caveats</h2>
   <ul>
-    <li>~5 years of data, most of it in rising markets; only one true bear stretch in the sample.</li>
+    <li>~5 years of data, most of it in rising markets; only one true bear stretch in each sample.</li>
     <li>Many parameters were explored during research, so some selection bias is inevitable.</li>
     <li>The forward paper-trading demo is the only remaining honest, fully out-of-sample validator.</li>
-    <li>The final specification differs from its predecessor by a single, mechanism-supported refinement — not a curve-fit.</li>
+    <li>Strategy B's annual equity curve is plotted from year-end cumulative P&amp;L (six points), not weekly.</li>
   </ul>
 
   <footer>
-    Simulated research backtest — educational only, not financial advice; past performance does not indicate future
+    Simulated research backtests — educational only, not financial advice; past performance does not indicate future
     results. Strategy logic, parameters and instrument-selection rules are proprietary and intentionally omitted.<br>
     <a href="index.html">← Live track record</a>
   </footer>
