@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="60">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NQ Systematic — Live Track Record</title>
+<style>
+  :root { --bg:#0d1117; --card:#161b22; --line:#21262d; --txt:#c9d1d9; --muted:#8b949e;
+           --green:#3fb950; --red:#f85149; --blue:#58a6ff; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt); font:14px/1.5 -apple-system,Segoe UI,Roboto,Arial,sans-serif; }
+  .wrap { max-width:1000px; margin:0 auto; padding:24px 18px 60px; }
+  h1 { font-size:20px; margin:0 0 2px; }
+  h1 .sub { color:var(--muted); font-weight:400; font-size:13px; }
+  h2 { font-size:15px; }
+  .small { font-size:11px; } .muted { color:var(--muted); }
+  .pill { padding:4px 9px; border-radius:999px; font-size:11px; border:1px solid var(--line); background:var(--card); }
+  .pill.on b { color:var(--green); } .pill.stale b { color:#d29922; } .pill.off b { color:var(--muted); }
+  .summary { margin:18px 0; padding:16px 18px; background:#11151c; border:1px solid var(--line);
+              border-radius:12px; display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; }
+  .summary .big { font-size:30px; font-weight:700; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:760px) { .grid { grid-template-columns:1fr; } }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; }
+  th { text-align:left; color:var(--muted); font-weight:500; border-bottom:1px solid var(--line); padding:6px; }
+  td { padding:6px; border-bottom:1px solid var(--line); }
+  .num { text-align:right; font-variant-numeric:tabular-nums; }
+  .pos { color:var(--green); } .neg { color:var(--red); } .buy { color:var(--green); } .sell { color:var(--red); }
+  .botbadge { font-size:10px; padding:2px 7px; border-radius:5px; font-weight:600; }
+  .botbadge.a { background:#11253f; color:var(--blue); } .botbadge.b { background:#2d2410; color:#d29922; }
+  .statgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .stat { background:#0d1117; border:1px solid var(--line); border-radius:8px; padding:10px 8px; text-align:center; }
+  .stat .sv { font-size:18px; font-weight:700; font-variant-numeric:tabular-nums; }
+  .stat .sl { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; margin-top:2px; }
+  .section-h { margin:26px 0 10px; font-size:15px; }
+  .chart { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; margin:16px 0; }
+  footer { margin-top:28px; color:var(--muted); font-size:11.5px; }
+</style></head><body>
+<div class="wrap">
+  <h1>NQ Systematic <span class="sub">· live track record · simulated on $100k base</span></h1>
+
+  <div class="summary">
+    <span class="muted">Combined realized P&amp;L</span>
+    <span class="big pos">$19,297.50</span>
+    <span class="muted small">Strategy A $17,868.00 · Strategy B $1,429.50 ·
+      on $100,000 (+19.3%)</span>
+  </div>
+
+  <div class="grid">
+    
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <h2 style="margin:0">Strategy A <span class="muted small">· NQ intraday</span></h2><span class="pill on"><b>live</b> · 0s</span>
+      </div>
+      <div class="statgrid">
+        <div class="stat"><div class="sv pos">$17,868</div><div class="sl">Realized P&L</div></div>
+        <div class="stat"><div class="sv">9</div><div class="sl">Closed trades</div></div>
+        <div class="stat"><div class="sv">56%</div><div class="sl">Win rate</div></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <h2 style="margin:0">Strategy B <span class="muted small">· NQ intraday</span></h2><span class="pill stale"><b>idle</b> · 3567m</span>
+      </div>
+      <div class="statgrid">
+        <div class="stat"><div class="sv pos">$1,430</div><div class="sl">Realized P&L</div></div>
+        <div class="stat"><div class="sv">5</div><div class="sl">Closed trades</div></div>
+        <div class="stat"><div class="sv">40%</div><div class="sl">Win rate</div></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="section-h">Equity curve <span class="muted small">· cumulative realized P&amp;L</span></h3>
+  <div class="chart"><svg viewBox="0 0 900 280" width="100%" height="280" preserveAspectRatio="none"
+       role="img" aria-label="Cumulative realized P&amp;L from 2026-06-04 to 2026-06-12, ending $19,298">
+  <line x1="56" y1="241" x2="884" y2="241" stroke="#30363d" stroke-dasharray="4 4"/>
+  <polyline fill="none" stroke="#3fb950" stroke-width="2" points="56,250 120,205 183,227 247,211 311,158 374,158 438,183 502,236 566,216 629,238 693,247 757,136 820,76 884,18"/>
+  <text x="6" y="22" font-size="10" fill="#8b949e">$19,298</text>
+  <text x="6" y="254" font-size="10" fill="#8b949e">$-778</text>
+  <text x="56" y="272" font-size="10" fill="#8b949e">2026-06-04</text>
+  <text x="824" y="272" font-size="10" fill="#8b949e">2026-06-12</text>
+</svg></div>
+
+  <h3 class="section-h">Backtest performance <span class="muted small">· refreshed 2026-06-15 · 5y, 1-min bars</span></h3>
+  <div class="grid">
+    
+    <div class="card">
+      <h2>Strategy A <span class="muted small">· NQ</span></h2>
+      <div class="statgrid"><div class="stat"><div class="sv pos">+28.8%</div><div class="sl">APR /$100k</div></div><div class="stat"><div class="sv pos">1.32</div><div class="sl">Profit factor</div></div><div class="stat"><div class="sv pos">+1.94</div><div class="sl">Sharpe</div></div><div class="stat"><div class="sv ">48.2%</div><div class="sl">Win rate</div></div><div class="stat"><div class="sv pos">$155,730</div><div class="sl">Net P&L</div></div><div class="stat"><div class="sv neg">-15.4%</div><div class="sl">Max DD</div></div><div class="stat"><div class="sv ">1,390</div><div class="sl">Trades</div></div></div>
+      <div class="muted small" style="margin-top:10px">
+        2021-01-04 → 2026-06-09 · 5.4y ·
+        1,390 trades · $155,730 on $100k = +156% total / +28.8%/yr · simulated
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Strategy B <span class="muted small">· NQ</span></h2>
+      <div class="statgrid"><div class="stat"><div class="sv pos">+20.5%</div><div class="sl">APR /$100k</div></div><div class="stat"><div class="sv pos">1.34</div><div class="sl">Profit factor</div></div><div class="stat"><div class="sv pos">+1.50</div><div class="sl">Sharpe</div></div><div class="stat"><div class="sv ">32.9%</div><div class="sl">Win rate</div></div><div class="stat"><div class="sv pos">$110,563</div><div class="sl">Net P&L</div></div><div class="stat"><div class="sv neg">-10.8%</div><div class="sl">Max DD</div></div><div class="stat"><div class="sv ">+0.098R</div><div class="sl">Expectancy</div></div></div>
+      <div class="muted small" style="margin-top:10px">
+        2020-12-30 → 2026-06-12 · 5.4y ·
+        1,389 trades · $110,563 on $100k = +111% total / +20.5%/yr · simulated
+      </div>
+    </div>
+  </div>
+
+  <h3 class="section-h">Recent fills</h3>
+  
+    <table class="trades">
+      <tr><th>Time (London)</th><th>Strategy</th><th>Inst</th><th>Side</th><th>Qty</th>
+          <th>Price</th><th>Event</th><th>P&amp;L</th><th>R</th></tr>
+      <tr><td>2026-06-12 16:15</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='sell'>SELL</td><td class='num'>1</td><td class='num'>30,021.25</td><td>Target · missed</td><td class='num pos'>$5,055.00</td><td class='num'>1.000</td></tr><tr><td>2026-06-12 15:00</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='buy'>BUY</td><td class='num'>1</td><td class='num'>29,768.50</td><td>Entry · missed</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-12 10:29</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='sell'>SELL</td><td class='num'>1</td><td class='num'>29,900.75</td><td>Target</td><td class='num pos'>$5,180.00</td><td class='num'>2.815</td></tr><tr><td>2026-06-12 08:40</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='buy'>BUY</td><td class='num'>1</td><td class='num'>29,641.75</td><td>Entry</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-11 09:03</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='sell'>SELL</td><td class='num'>1</td><td class='num'>28,902.75</td><td>Target · missed</td><td class='num pos'>$9,555.00</td><td class='num'>3.000</td></tr><tr><td>2026-06-11 00:40</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='buy'>BUY</td><td class='num'>1</td><td class='num'>28,425.00</td><td>Entry · missed</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-10 16:11</td><td><span class='botbadge b'>B</span></td><td>MNQ</td><td class='sell'>SELL</td><td class='num'>1</td><td class='num'>28,772.50</td><td>Stop</td><td class='num neg'>$-758.50</td><td class='num'>-0.971</td></tr><tr><td>2026-06-10 15:12</td><td><span class='botbadge b'>B</span></td><td>MNQ</td><td class='buy'>BUY</td><td class='num'>1</td><td class='num'>29,151.75</td><td>Entry</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-10 12:05</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='sell'>SELL</td><td class='num'>1</td><td class='num'>28,685.00</td><td>Stop</td><td class='num neg'>$-1,865.00</td><td class='num'>-0.989</td></tr><tr><td>2026-06-10 10:30</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='buy'>BUY</td><td class='num'>1</td><td class='num'>28,778.25</td><td>Entry</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-09 21:06</td><td><span class='botbadge b'>B</span></td><td>MNQ</td><td class='buy'>BUY</td><td class='num'>2</td><td class='num'>29,187.00</td><td>EOD</td><td class='num pos'>$1,654.50</td><td class='num'>1.935</td></tr><tr><td>2026-06-09 20:25</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='sell'>SELL</td><td class='num'>1</td><td class='num'>28,891.25</td><td>EOD</td><td class='num neg'>$-4,550.00</td><td class='num'>-0.271</td></tr><tr><td>2026-06-09 20:05</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='buy'>BUY</td><td class='num'>1</td><td class='num'>29,118.75</td><td>Entry</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-09 17:38</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='sell'>SELL</td><td class='num'>1</td><td class='num'>28,430.75</td><td>Stop · missed</td><td class='num neg'>$-2,140.00</td><td class='num'>-1.000</td></tr><tr><td>2026-06-09 17:25</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='buy'>BUY</td><td class='num'>1</td><td class='num'>28,537.75</td><td>Entry · missed</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-09 15:10</td><td><span class='botbadge b'>B</span></td><td>MNQ</td><td class='sell'>SELL</td><td class='num'>2</td><td class='num'>29,600.62</td><td>Entry</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-08 16:31</td><td><span class='botbadge b'>B</span></td><td>MNQ</td><td class='sell'>SELL</td><td class='num'>2</td><td class='num'>29,587.00</td><td>EOD</td><td class='num neg'>$-39.00</td><td class='num'>-0.040</td></tr><tr><td>2026-06-08 15:36</td><td><span class='botbadge b'>B</span></td><td>MNQ</td><td class='buy'>BUY</td><td class='num'>2</td><td class='num'>29,596.75</td><td>Entry</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-08 12:10</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='sell'>SELL</td><td class='num'>1</td><td class='num'>29,282.75</td><td>Target · missed</td><td class='num pos'>$4,650.00</td><td class='num'>3.000</td></tr><tr><td>2026-06-08 07:00</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='buy'>BUY</td><td class='num'>1</td><td class='num'>29,050.25</td><td>Entry · missed</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-05 20:56</td><td><span class='botbadge b'>B</span></td><td>MNQ</td><td class='buy'>BUY</td><td class='num'>1</td><td class='num'>29,095.25</td><td>EOD</td><td class='num pos'>$1,350.50</td><td class='num'>2.045</td></tr><tr><td>2026-06-05 16:12</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='sell'>SELL</td><td class='num'>1</td><td class='num'>29,757.25</td><td>Stop</td><td class='num neg'>$-1,880.00</td><td class='num'>-1.008</td></tr><tr><td>2026-06-05 16:07</td><td><span class='botbadge b'>B</span></td><td>MNQ</td><td class='sell'>SELL</td><td class='num'>1</td><td class='num'>29,770.50</td><td>Entry</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-05 16:00</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='buy'>BUY</td><td class='num'>1</td><td class='num'>29,851.25</td><td>Entry</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-04 18:58</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='sell'>SELL</td><td class='num'>10</td><td class='num'>30,561.25</td><td>Target</td><td class='num pos'>$3,863.00</td><td class='num'>0.895</td></tr><tr><td>2026-06-04 16:00</td><td><span class='botbadge b'>B</span></td><td>MNQ</td><td class='buy'>BUY</td><td class='num'>2</td><td class='num'>30,363.00</td><td>Stop</td><td class='num neg'>$-778.00</td><td class='num'>-1.100</td></tr><tr><td>2026-06-04 16:00</td><td><span class='botbadge a'>A</span></td><td>NQ</td><td class='buy'>BUY</td><td class='num'>10</td><td class='num'>30,368.10</td><td>Entry</td><td class='num '></td><td class='num'></td></tr><tr><td>2026-06-04 15:06</td><td><span class='botbadge b'>B</span></td><td>MNQ</td><td class='sell'>SELL</td><td class='num'>2</td><td class='num'>30,168.50</td><td>Entry</td><td class='num '></td><td class='num'></td></tr>
+    </table>
+
+  <footer>
+    Updated 2026-06-15 09:49 BST. Auto-refreshes. Simulated paper-trading track record — not financial advice;
+    past performance does not indicate future results. Strategy logic, parameters and instruments selection
+    are proprietary and intentionally omitted.<br>
+    <a href="backtest.html" style="color:var(--blue)">Backtest detail →</a>
+  </footer>
+</div></body></html>
