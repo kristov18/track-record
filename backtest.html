@@ -111,7 +111,7 @@
   <h3>Equity curve (weekly)</h3>
   <div class="chart">
     <svg viewBox="0 0 900 300" width="100%" height="300" role="img"
-         aria-label="Strategy B weekly account equity rising from $100k to about $211k over 2021 to 2026 at the live MNQ 0.5%-risk sizing">
+         aria-label="Strategy B weekly account equity rising from $100k to about $211k over 2021 to 2026 at the live MNQ 0.5% sizing">
       <text x="10" y="20" font-size="12" fill="#8b949e">Account equity (USD) · $100k start · live MNQ 0.5% sizing</text>
       <polyline fill="none" stroke="#58a6ff" stroke-width="2" points="50,275 53,272 56,275 59,277 62,278 64,279 67,278 70,278 73,279 76,275 79,277 82,277 85,279 87,281 90,278 93,280 96,273 99,273 102,276 105,269 108,263 110,267 113,266 116,269 119,267 122,266 125,265 128,264 131,264 133,258 136,257 139,260 142,263 145,267 148,268 151,268 154,258 156,260 159,256 162,256 165,257 168,259 171,257 174,253 177,256 179,256 182,256 185,255 188,256 191,253 194,249 197,251 200,248 202,246 205,238 208,242 211,249 214,250 217,250 220,249 223,244 226,244 228,239 231,237 234,237 237,243 240,241 243,238 246,227 249,223 251,224 254,221 257,217 260,215 263,212 266,215 269,219 272,218 274,217 277,219 280,220 283,211 286,208 289,209 292,210 295,210 297,211 300,213 303,213 306,215 309,214 312,212 315,207 318,201 320,197 323,194 326,195 329,195 332,194 335,196 338,200 341,199 343,195 346,195 349,193 352,193 355,192 358,188 361,190 364,193 366,192 369,194 372,192 375,186 378,190 381,185 384,189 387,187 390,190 392,185 395,184 398,180 401,179 404,184 407,180 410,179 413,177 415,171 418,171 421,171 424,175 427,178 430,179 433,176 436,176 438,178 441,181 444,182 447,178 450,178 453,181 456,183 459,182 461,181 464,175 467,168 470,164 473,164 476,164 479,160 482,165 484,165 487,164 490,163 493,164 496,161 499,159 502,161 505,161 507,165 510,167 513,170 516,166 519,169 522,170 525,174 528,175 530,177 533,176 536,179 539,165 542,166 545,151 548,148 551,153 554,152 556,152 559,146 562,150 565,154 568,150 571,146 574,151 577,146 579,143 582,137 585,137 588,130 591,124 594,120 597,115 600,113 602,109 605,111 608,114 611,117 614,119 617,115 620,110 623,112 625,109 628,108 631,105 634,100 637,99 640,100 643,98 646,94 648,92 651,96 654,93 657,94 660,94 663,93 666,94 669,92 671,87 674,86 677,86 680,86 683,86 686,78 689,74 692,70 694,74 697,75 700,75 703,77 706,77 709,78 712,76 715,78 718,81 720,81 723,79 726,80 729,82 732,79 735,82 738,82 741,77 743,79 746,78 749,76 752,74 755,74 758,75 761,71 764,70 766,49 769,49 772,50 775,55 778,56 781,56 784,59 787,58 789,62 792,60 795,59 798,60 801,57 804,60 807,58 810,58 812,55 815,52 818,52 821,57 824,55 827,54 830,50 833,51 835,53 838,51 841,56 844,47 847,45 850,47 853,46 856,46 858,51 861,54 864,53 867,53 870,53"/>
       <line x1="50" y1="275" x2="870" y2="275" stroke="#30363d" stroke-dasharray="4 4"/>
@@ -124,6 +124,47 @@
       <text x="502" y="296" font-size="10" fill="#8b949e">2024</text>
       <text x="651" y="296" font-size="10" fill="#8b949e">2025</text>
       <text x="801" y="296" font-size="10" fill="#8b949e">2026</text>
+    </svg>
+  </div>
+
+  <h2>Strategy B1 <span class="muted small">· NQ intraday</span></h2>
+  <div class="sub">2024-06-11 → 2026-06-16 · 503 trades · long-option overlay of Strategy B · 0.5% premium-at-risk per trade (defined-risk)</div>
+
+  <h3>Headline results</h3>
+  <table>
+    <tr><th>Metric</th><th>Value</th></tr>
+    <tr><td>Trades</td><td>503</td></tr>
+    <tr><td>Profit factor</td><td>2.32</td></tr>
+    <tr><td>Sharpe (daily)</td><td class="pos">+2.58</td></tr>
+    <tr><td>Win rate</td><td>46.7%</td></tr>
+    <tr><td>Net P&amp;L (on $100k)</td><td class="pos">$+155,660</td></tr>
+    <tr><td>Total return (2.0y)</td><td class="pos">+156%</td></tr>
+    <tr><td>Annualized (APR)</td><td class="pos">+77.8%/yr</td></tr>
+    <tr><td>Max drawdown</td><td class="neg">-5.8%</td></tr>
+  </table>
+
+  <h3>Per-year performance</h3>
+  <table>
+    <tr><th>Year</th><th>Trades</th><th>PF</th><th>Net</th><th>Return %</th><th>Max DD %</th></tr>
+    <tr><td>2024</td><td>140</td><td>2.78</td><td class="pos">$+49,539</td><td class="pos">+49.5%</td><td class="neg">-5.6%</td></tr>
+    <tr><td>2025</td><td>250</td><td>2.29</td><td class="pos">$+76,645</td><td class="pos">+76.6%</td><td class="neg">-5.8%</td></tr>
+    <tr><td>2026 <span class="muted small">(YTD)</span></td><td>113</td><td>1.96</td><td class="pos">$+29,476</td><td class="pos">+29.5%</td><td class="neg">-4.4%</td></tr>
+  </table>
+
+  <h3>Equity curve (weekly)</h3>
+  <div class="chart">
+    <svg viewBox="0 0 900 300" width="100%" height="300" role="img"
+         aria-label="Strategy B1 weekly account equity rising from $100k to about $256k over 2024 to 2026 at the 0.5%-premium option overlay">
+      <text x="10" y="20" font-size="12" fill="#8b949e">Account equity (USD) · $100k start · 0.5%-premium option overlay</text>
+      <polyline fill="none" stroke="#58a6ff" stroke-width="2" points="50,276 58,271 66,273 73,266 81,259 89,256 97,253 105,245 112,237 120,234 128,228 136,228 144,223 152,223 159,225 167,227 175,230 183,227 191,223 198,223 206,221 214,221 222,218 230,216 237,216 245,216 253,212 261,208 269,205 276,205 284,203 292,204 300,203 308,201 316,198 323,196 331,191 339,189 347,186 355,186 362,187 370,180 378,173 386,166 394,166 401,165 409,166 417,166 425,166 433,168 440,167 448,167 456,167 464,168 472,164 480,160 487,162 495,161 503,166 511,165 519,158 526,162 534,154 542,154 550,152 558,152 565,155 573,151 581,149 589,93 597,94 604,94 612,96 620,98 628,98 636,100 644,94 651,97 659,93 667,90 675,92 683,85 690,87 698,88 706,90 714,90 722,86 729,81 737,84 745,82 753,81 761,73 768,74 776,77 784,74 792,76 800,62 808,59 815,62 823,57 831,57 839,59 847,58 854,55 862,51 870,50"/>
+      <line x1="50" y1="275" x2="870" y2="275" stroke="#30363d" stroke-dasharray="4 4"/>
+      <text x="2" y="285" font-size="10" fill="#8b949e">$100k</text>
+      <text x="2" y="207" font-size="10" fill="#8b949e">$150k</text>
+      <text x="2" y="135" font-size="10" fill="#8b949e">$200k</text>
+      <text x="2" y="62" font-size="10" fill="#8b949e">$250k</text>
+      <text x="50" y="296" font-size="10" fill="#8b949e">2024</text>
+      <text x="276" y="296" font-size="10" fill="#8b949e">2025</text>
+      <text x="683" y="296" font-size="10" fill="#8b949e">2026</text>
     </svg>
   </div>
 
@@ -155,6 +196,7 @@
     <li>~5 years of data, most of it in rising markets; only one true bear stretch in each sample.</li>
     <li>Many parameters were explored during research, so some selection bias is inevitable.</li>
     <li>The forward paper-trading demo is the only remaining honest, fully out-of-sample validator.</li>
+    <li>Strategy B1 is the option expression of Strategy B over a shorter (~2-year) history and is a backtest only (not yet live) — its higher return reflects defined-risk option convexity plus the recent window; compare on annualized return, not raw dollars.</li>
   </ul>
 
   <footer>
