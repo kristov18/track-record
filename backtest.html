@@ -28,7 +28,7 @@
 </style></head><body>
 <div class="wrap">
   <h1>NQ Systematic — Backtest Detail</h1>
-  <div class="sub">Two uncorrelated NQ strategies · ~5-year simulated backtests · 1-min bars · net of realistic costs</div>
+  <div class="sub">Three largely uncorrelated NQ strategies · ~5-year simulated backtests · 1-min bars · net of realistic costs</div>
 
     <h2>Strategy A <span class="muted small">· NQ intraday</span></h2>
   <div class="sub">2021-01-04 → 2026-08-24 · 1,440 trades · size 1 NQ (= 10 MNQ)</div>
@@ -108,7 +108,7 @@
     <tr><td>2023</td><td>254</td><td>1.26</td><td class="pos">$+16,704</td><td class="pos">+16.7%</td><td class="neg">-7.5%</td></tr>
     <tr><td>2024</td><td>257</td><td>1.57</td><td class="pos">$+33,698</td><td class="pos">+33.7%</td><td class="neg">-10.8%</td></tr>
     <tr><td>2025</td><td>256</td><td>1.28</td><td class="pos">$+15,631</td><td class="pos">+15.6%</td><td class="neg">-8.1%</td></tr>
-    <tr><td>2026 <span class="muted small">(YTD)</span></td><td>162</td><td>0.91</td><td class="pos">$+-2,952</td><td class="pos">+-3.0%</td><td class="neg">-10.7%</td></tr>
+    <tr><td>2026 <span class="muted small">(YTD)</span></td><td>162</td><td>0.91</td><td class="neg">$-2,952</td><td class="neg">-3.0%</td><td class="neg">-10.7%</td></tr>
   </table>
 
   <h3>Equity curve (weekly)</h3>
@@ -177,7 +177,7 @@
 
   <h2>Sober forward expectations</h2>
   <div class="note">
-    <strong>Both backtests are bull-tilted</strong> — most of each sample fell in rising markets, so forward
+    <strong>All three backtests are bull-tilted</strong> — most of each sample fell in rising markets, so forward
     expectations are deliberately haircut for selection bias:
     <ul>
       <li><strong>Returns:</strong> expect roughly half the backtested annual figures live.</li>
@@ -194,7 +194,7 @@
     <li>Sensitivity: deliberately scrambling the logic collapses returns to ~$0 — confirms the edge is real, not curve-fit.</li>
     <li>Bootstrap 95% CIs exclude break-even on profit factor, Sharpe and net P&amp;L.</li>
     <li>Beats simpler baselines on Sharpe, net P&amp;L and drawdown simultaneously.</li>
-    <li>The two strategies are nearly uncorrelated, so combining them raises the portfolio Sharpe above either alone.</li>
+    <li>The strategies are largely uncorrelated with each other, so combining them raises the portfolio Sharpe above any one alone.</li>
   </ol>
 
   <h2>Honest caveats</h2>
