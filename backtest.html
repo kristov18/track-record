@@ -31,18 +31,18 @@
   <div class="sub">Three largely uncorrelated NQ strategies · ~5-year simulated backtests · 1-min bars · net of realistic costs</div>
 
     <h2>Strategy A <span class="muted small">· NQ intraday</span></h2>
-  <div class="sub">2021-09-02 → 2026-09-24 · 679 trades · size 1 NQ (= 10 MNQ)</div>
+  <div class="sub">2021-09-02 → 2026-09-24 · 659 trades · size 1 NQ (= 10 MNQ)</div>
 
   <h3>Headline results</h3>
   <table>
     <tr><th>Metric</th><th>Value</th></tr>
-    <tr><td>Trades</td><td>679</td></tr>
-    <tr><td>Profit factor</td><td>1.68</td></tr>
-    <tr><td>Sharpe (daily)</td><td class="pos">+1.85</td></tr>
-    <tr><td>Win rate</td><td>43.7%</td></tr>
-    <tr><td>Net P&amp;L (5.1y)</td><td class="pos">$+161,450</td></tr>
-    <tr><td>Max drawdown</td><td class="neg">$-9,748</td></tr>
-    <tr><td>Annualized</td><td class="pos">$+31,657/yr</td></tr>
+    <tr><td>Trades</td><td>659</td></tr>
+    <tr><td>Profit factor</td><td>1.70</td></tr>
+    <tr><td>Sharpe (daily)</td><td class="pos">+1.89</td></tr>
+    <tr><td>Win rate</td><td>43.2%</td></tr>
+    <tr><td>Net P&amp;L (5.1y)</td><td class="pos">$+154,070</td></tr>
+    <tr><td>Max drawdown</td><td class="neg">$-6,295</td></tr>
+    <tr><td>Annualized</td><td class="pos">$+30,210/yr</td></tr>
   </table>
 
   <h3>Per-year performance</h3>
@@ -50,31 +50,31 @@
     <tr><th>Year</th><th>Trades</th><th>PF</th><th>Win %</th><th>Net</th></tr>
     <tr><td>2021</td><td>22</td><td>1.61</td><td>36.4%</td><td class="pos">$+3,966</td></tr>
     <tr><td>2022</td><td>113</td><td>1.93</td><td>52.2%</td><td class="pos">$+35,987</td></tr>
-    <tr><td>2023</td><td>174</td><td>1.48</td><td>40.8%</td><td class="pos">$+16,861</td></tr>
-    <tr><td>2024</td><td>132</td><td>1.31</td><td>41.7%</td><td class="pos">$+12,913</td></tr>
-    <tr><td>2025</td><td>137</td><td>2.03</td><td>46.0%</td><td class="pos">$+52,437</td></tr>
-    <tr><td>2026</td><td>101</td><td>1.62</td><td>40.6%</td><td class="pos">$+39,286</td></tr>
+    <tr><td>2023</td><td>167</td><td>1.51</td><td>40.1%</td><td class="pos">$+16,829</td></tr>
+    <tr><td>2024</td><td>127</td><td>1.35</td><td>40.9%</td><td class="pos">$+13,456</td></tr>
+    <tr><td>2025</td><td>134</td><td>1.99</td><td>45.5%</td><td class="pos">$+49,906</td></tr>
+    <tr><td>2026</td><td>96</td><td>1.63</td><td>39.6%</td><td class="pos">$+33,926</td></tr>
   </table>
 
   <h3>Bootstrap 95% confidence intervals</h3>
   <p class="small muted">10,000 resamples; daily Sharpe uses a multi-day block bootstrap for serial correlation.</p>
   <table>
     <tr><th>Metric</th><th>Observed</th><th>5% bound</th><th>95% bound</th><th>P(&gt; reference)</th></tr>
-    <tr><td>Profit factor</td><td>1.68</td><td>1.4</td><td>2.02</td><td>P(PF&gt;1.0) = 100.0%</td></tr>
-    <tr><td>Sharpe (block)</td><td>+1.85</td><td>+1.39</td><td>+2.30</td><td>P(Sh&gt;1.0) = 99.9%</td></tr>
-    <tr><td>Net (5.1y)</td><td>$+161,450</td><td>$+101,780</td><td>$+223,316</td><td>P(Net&gt;0) = 100.0%</td></tr>
+    <tr><td>Profit factor</td><td>1.70</td><td>1.42</td><td>2.02</td><td>P(PF&gt;1.0) = 100.0%</td></tr>
+    <tr><td>Sharpe (block)</td><td>+1.89</td><td>+1.45</td><td>+2.32</td><td>P(Sh&gt;1.0) = 99.9%</td></tr>
+    <tr><td>Net (5.1y)</td><td>$+154,070</td><td>$+98,628</td><td>$+211,419</td><td>P(Net&gt;0) = 100.0%</td></tr>
   </table>
 
   <h3>Equity curve (weekly)</h3>
   <div class="chart">
     <svg viewBox="0 0 900 300" width="100%" height="300" role="img"
-         aria-label="Strategy A cumulative simulated P and L reaching about $161k over 2021 to 2026 on one NQ contract">
+         aria-label="Strategy A cumulative simulated P and L reaching about $154k over 2021 to 2026 on one NQ contract">
       <text x="10" y="20" font-size="12" fill="#8b949e">Cumulative P&amp;L (USD, 1 NQ = 10 MNQ)</text>
-      <polyline fill="none" stroke="#3fb950" stroke-width="2" points="50,275 53,273 56,274 59,273 62,273 65,272 69,272 72,272 75,270 78,270 81,270 84,270 87,271 90,269 93,269 96,271 100,272 103,269 106,269 109,270 112,271 115,266 118,267 121,266 124,260 127,259 130,262 134,260 137,261 140,261 143,261 146,261 149,261 152,259 155,259 158,263 161,255 164,252 168,255 171,255 174,255 177,251 180,248 183,250 186,245 189,245 192,245 195,247 199,247 202,247 205,247 208,248 211,248 214,242 217,242 220,238 223,237 226,239 229,236 233,229 236,229 239,230 242,225 245,226 248,226 251,225 254,225 257,226 260,222 264,219 267,218 270,220 273,221 276,221 279,222 282,222 285,220 288,221 291,219 294,219 298,216 301,216 304,215 307,213 310,211 313,211 316,210 319,210 322,210 325,209 328,209 332,209 335,209 338,208 341,207 344,206 347,206 350,206 353,205 356,207 359,207 363,207 366,208 369,212 372,210 375,208 378,210 381,210 384,211 387,209 390,206 393,206 397,202 400,203 403,204 406,200 409,200 412,201 415,202 418,199 421,195 424,195 428,194 431,196 434,195 437,195 440,193 443,189 446,189 449,188 452,188 455,189 458,186 462,186 465,186 468,188 471,188 474,187 477,184 480,184 483,188 486,188 489,187 492,187 496,187 499,182 502,182 505,181 508,184 511,184 514,182 517,185 520,187 523,187 527,189 530,189 533,190 536,188 539,188 542,185 545,177 548,172 551,172 554,171 557,170 561,166 564,167 567,167 570,169 573,169 576,169 579,169 582,173 585,171 588,171 592,167 595,165 598,163 601,163 604,158 607,154 610,150 613,150 616,156 619,158 622,151 626,144 629,146 632,146 635,135 638,138 641,132 644,132 647,132 650,132 653,129 656,123 660,123 663,123 666,119 669,119 672,118 675,119 678,119 681,119 684,119 687,121 691,120 694,116 697,119 700,120 703,120 706,120 709,122 712,114 715,116 718,118 721,118 725,115 728,115 731,114 734,105 737,106 740,106 743,104 746,106 749,103 752,96 756,96 759,97 762,100 765,104 768,99 771,95 774,95 777,91 780,90 783,90 786,92 790,86 793,85 796,86 799,85 802,84 805,84 808,84 811,79 814,79 817,77 820,83 824,52 827,58 830,55 833,55 836,51 839,57 842,54 845,54 848,50 851,47 855,52 858,49 861,48 864,48 867,47 870,44"/>
+      <polyline fill="none" stroke="#3fb950" stroke-width="2" points="50,275 53,273 56,274 59,273 62,273 65,272 69,271 72,271 75,270 78,270 81,270 84,270 87,270 90,269 93,269 96,270 100,271 103,269 106,269 109,270 112,271 115,265 118,266 121,266 124,259 127,258 130,261 134,259 137,260 140,260 143,260 146,260 149,260 152,259 155,258 158,262 161,254 164,251 168,254 171,254 174,254 177,250 180,247 183,249 186,244 189,244 192,244 195,246 199,246 202,246 205,246 208,246 211,247 214,241 217,240 220,236 223,235 226,238 229,234 233,227 236,227 239,228 242,223 245,224 248,224 251,223 254,223 257,224 260,219 264,216 267,215 270,218 273,218 276,218 279,219 282,219 285,218 288,220 291,217 294,217 298,214 301,214 304,213 307,211 310,209 313,209 316,209 319,209 322,209 325,209 328,209 332,209 335,209 338,207 341,206 344,205 347,206 350,206 353,205 356,207 359,207 363,206 366,208 369,212 372,210 375,208 378,210 381,210 384,211 387,209 390,206 393,206 397,201 400,201 403,201 406,197 409,197 412,197 415,198 418,195 421,191 424,191 428,190 431,192 434,192 437,192 440,190 443,186 446,186 449,185 452,185 455,186 458,183 462,183 465,183 468,184 471,185 474,183 477,180 480,180 483,184 486,184 489,183 492,183 496,183 499,178 502,178 505,177 508,179 511,180 514,178 517,181 520,183 523,183 527,185 530,185 533,186 536,184 539,184 542,181 545,172 548,167 551,167 554,166 557,165 561,163 564,164 567,164 570,166 573,166 576,166 579,166 582,167 585,166 588,166 592,161 595,159 598,157 601,157 604,152 607,148 610,143 613,144 616,149 619,152 622,144 626,137 629,139 632,139 635,127 638,130 641,124 644,124 647,124 650,125 653,123 656,117 660,116 663,116 666,112 669,112 672,111 675,112 678,112 681,113 684,112 687,114 691,113 694,109 697,112 700,114 703,114 706,113 709,115 712,107 715,109 718,111 721,111 725,107 728,107 731,107 734,97 737,100 740,100 743,99 746,101 749,97 752,91 756,91 759,92 762,90 765,95 768,90 771,86 774,86 777,81 780,72 783,71 786,74 790,67 793,66 796,67 799,66 802,65 805,65 808,65 811,60 814,60 817,58 820,64 824,48 827,53 830,50 833,50 836,47 839,52 842,50 845,50 848,50 851,48 855,52 858,50 861,49 864,49 867,47 870,44"/>
 
       <text x="2" y="279" font-size="10" fill="#8b949e">$0k</text>
-      <text x="2" y="164" font-size="10" fill="#8b949e">$81k</text>
-      <text x="2" y="48" font-size="10" fill="#8b949e">$161k</text>
+      <text x="2" y="164" font-size="10" fill="#8b949e">$77k</text>
+      <text x="2" y="48" font-size="10" fill="#8b949e">$154k</text>
       <text x="50" y="296" font-size="10" fill="#8b949e">2021</text>
       <text x="109" y="296" font-size="10" fill="#8b949e">2022</text>
       <text x="270" y="296" font-size="10" fill="#8b949e">2023</text>
@@ -85,16 +85,16 @@
   </div>
 
   <h2>Strategy B <span class="muted small">· NQ intraday</span></h2>
-  <div class="sub">2020-12-30 → 2026-09-23 · 1,465 trades · live MNQ sizing (0.5% risk ≈ $830/trade, fixed) · returns on $100k</div>
+  <div class="sub">2020-12-30 → 2026-09-24 · 1,466 trades · live MNQ sizing (0.5% risk ≈ $830/trade, fixed) · returns on $100k</div>
 
   <h3>Headline results</h3>
   <table>
     <tr><th>Metric</th><th>Value</th></tr>
-    <tr><td>Trades</td><td>1,465</td></tr>
+    <tr><td>Trades</td><td>1,466</td></tr>
     <tr><td>Profit factor</td><td>1.30</td></tr>
     <tr><td>Sharpe (daily)</td><td class="pos">+1.34</td></tr>
-    <tr><td>Win rate</td><td>32.8%</td></tr>
-    <tr><td>Net P&amp;L (on $100k)</td><td class="pos">$+103,300</td></tr>
+    <tr><td>Win rate</td><td>32.7%</td></tr>
+    <tr><td>Net P&amp;L (on $100k)</td><td class="pos">$+103,291</td></tr>
     <tr><td>Total return (5.7y)</td><td class="pos">+103%</td></tr>
     <tr><td>Annualized (APR)</td><td class="pos">+18.1%/yr</td></tr>
     <tr><td>Max drawdown</td><td class="neg">-14.8%</td></tr>
@@ -108,7 +108,7 @@
     <tr><td>2023</td><td>254</td><td>1.26</td><td class="pos">$+16,704</td><td class="pos">+16.7%</td><td class="neg">-7.5%</td></tr>
     <tr><td>2024</td><td>257</td><td>1.57</td><td class="pos">$+33,698</td><td class="pos">+33.7%</td><td class="neg">-10.8%</td></tr>
     <tr><td>2025</td><td>256</td><td>1.28</td><td class="pos">$+15,631</td><td class="pos">+15.6%</td><td class="neg">-8.1%</td></tr>
-    <tr><td>2026 <span class="muted small">(YTD)</span></td><td>184</td><td>0.92</td><td class="neg">$-3,543</td><td class="neg">-3.5%</td><td class="neg">-14.8%</td></tr>
+    <tr><td>2026 <span class="muted small">(YTD)</span></td><td>185</td><td>0.91</td><td class="neg">$-3,552</td><td class="neg">-3.6%</td><td class="neg">-14.8%</td></tr>
   </table>
 
   <h3>Equity curve (weekly)</h3>
