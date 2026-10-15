@@ -46,12 +46,12 @@
   <div class="summary">
     <span class="muted">Combined realized P&amp;L</span>
     <span class="big pos">$13,634.13</span>
-    <span class="muted small">Strategy A $13,634.13 · Strategy C $0.00 ·
-      on $100,000 (+13.6%)</span><br><span class="muted small">Strategy A excludes one component retired on 2026-09-16: 23 closed trades (2026-06-04 → 2026-08-26), realized $-9,710.50. Strategy B was retired on 2026-10-15; its 88 closed trades (realized $-6,203.24) are no longer shown. Strategy C's record restarted on 2026-10-13 with revised rules; the earlier paper record (2026-08-27 → 2026-10-12, 12 closed trades, realized $-5,530.12) is not included.</span>
+    <span class="muted small">Strategy A $13,634.13 · Strategy B $0.00 · Strategy C $0.00 ·
+      on $100,000 (+13.6%)</span><br><span class="muted small">Strategy A excludes one component retired on 2026-09-16: 23 closed trades (2026-06-04 → 2026-08-26), realized $-9,710.50. The previous Strategy B was retired on 2026-10-15; its 88 closed trades (realized $-6,203.24) are no longer shown. The current Strategy B is a different strategy, on paper since 2026-10-15; its record starts there (no live record published). Strategy C's record restarted on 2026-10-13 with revised rules; the earlier paper record (2026-08-27 → 2026-10-12, 12 closed trades, realized $-5,530.12) is not included.</span>
     <br><span class="muted small">P&amp;L net of commission ($4.50 per NQ, $1.22 per MNQ round trip); fills at the actual execution price.</span>
   </div>
 
-  <div class="grid">
+  <div class="grid3">
     
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
@@ -63,6 +63,18 @@
         <div class="stat"><div class="sv">33%</div><div class="sl">Win rate</div></div>
       </div>
       <div class="muted small" style="margin-top:8px">Strategy A excludes one component retired on 2026-09-16: 23 closed trades (2026-06-04 → 2026-08-26), realized $-9,710.50.</div>
+    </div>
+    
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <h2 style="margin:0">Strategy B <span class="muted small">· NQ intraday</span></h2><span class="pill on"><b>live</b> · 1s</span>
+      </div>
+      <div class="statgrid">
+        <div class="stat"><div class="sv pos">$0</div><div class="sl">Realized P&L</div></div>
+        <div class="stat"><div class="sv">0</div><div class="sl">Closed trades</div></div>
+        <div class="stat"><div class="sv">—%</div><div class="sl">Win rate</div></div>
+      </div>
+      <div class="muted small" style="margin-top:8px">The previous Strategy B was retired on 2026-10-15; its 88 closed trades (realized $-6,203.24) are no longer shown. The current Strategy B is a different strategy, on paper since 2026-10-15; its record starts there (no live record published).</div>
     </div>
     
     <div class="card">
@@ -102,6 +114,15 @@
     </div>
     
     <div class="card">
+      <h2>Strategy B <span class="muted small">· NQ</span></h2>
+      <div class="statgrid"><div class="stat"><div class="sv pos">+29.5%</div><div class="sl">APR /$100k</div></div><div class="stat"><div class="sv pos">2.40</div><div class="sl">Profit factor</div></div><div class="stat"><div class="sv pos">+1.35</div><div class="sl">Sharpe</div></div><div class="stat"><div class="sv ">60.4%</div><div class="sl">Win rate</div></div><div class="stat"><div class="sv pos">$171,229</div><div class="sl">Net P&L</div></div><div class="stat"><div class="sv neg">-10.3%</div><div class="sl">Max DD</div></div><div class="stat"><div class="sv ">+0.323R</div><div class="sl">Expectancy</div></div></div>
+      <div class="muted small" style="margin-top:10px">
+        2021-01-07 → 2026-10-12 · 5.8y ·
+        182 trades · $171,229 on $100k = +171% total / +29.5%/yr · simulated
+      </div>
+    </div>
+    
+    <div class="card">
       <h2>Strategy C <span class="muted small">· NQ</span></h2>
       <div class="statgrid"><div class="stat"><div class="sv pos">+14.9%</div><div class="sl">APR /$100k</div></div><div class="stat"><div class="sv pos">1.82</div><div class="sl">Profit factor</div></div><div class="stat"><div class="sv pos">+1.18</div><div class="sl">Sharpe</div></div><div class="stat"><div class="sv ">47.1%</div><div class="sl">Win rate</div></div><div class="stat"><div class="sv pos">$85,040</div><div class="sl">Net P&L</div></div><div class="stat"><div class="sv neg">-6.9%</div><div class="sl">Max DD</div></div><div class="stat"><div class="sv ">+0.267R</div><div class="sl">Expectancy</div></div></div>
       <div class="muted small" style="margin-top:10px">
@@ -122,7 +143,7 @@
     </div>
 
   <footer>
-    Updated 2026-10-15 12:36 BST. Auto-refreshes. Simulated paper-trading track record — not financial advice;
+    Updated 2026-10-15 13:06 BST. Auto-refreshes. Simulated paper-trading track record — not financial advice;
     past performance does not indicate future results. Strategy logic, parameters and instruments selection
     are proprietary and intentionally omitted.<br>
     <a href="backtest.html" style="color:var(--blue)">Backtest detail →</a>
