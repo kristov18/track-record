@@ -58,7 +58,7 @@
     
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-        <h2 style="margin:0">Strategy A <span class="muted small">· NQ intraday</span></h2><span class="pill on"><b>live</b> · 40s</span>
+        <h2 style="margin:0">Strategy A <span class="muted small">· NQ intraday</span></h2><span class="pill on"><b>live</b> · 35s</span>
       </div>
       <div class="statgrid">
         <div class="stat"><div class="sv pos">$5,075</div><div class="sl">Realized P&L</div></div>
@@ -70,7 +70,7 @@
     
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-        <h2 style="margin:0">Strategy B <span class="muted small">· NQ intraday</span></h2><span class="pill on"><b>live</b> · 0s</span>
+        <h2 style="margin:0">Strategy B <span class="muted small">· NQ intraday</span></h2><span class="pill on"><b>live</b> · 60s</span>
       </div>
       <div class="statgrid">
         <div class="stat"><div class="sv pos">$6,463</div><div class="sl">Realized P&L</div></div>
@@ -82,7 +82,7 @@
     
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-        <h2 style="margin:0">Strategy C <span class="muted small">· NQ intraday</span></h2><span class="pill on"><b>live</b> · 60s</span>
+        <h2 style="margin:0">Strategy C <span class="muted small">· NQ intraday</span></h2><span class="pill on"><b>live</b> · 0s</span>
       </div>
       <div class="statgrid">
         <div class="stat"><div class="sv neg">$-299</div><div class="sl">Realized P&L</div></div>
@@ -118,10 +118,10 @@
     
     <div class="card">
       <h2>Strategy B <span class="muted small">· NQ</span></h2>
-      <div class="statgrid"><div class="stat"><div class="sv pos">+33.8%</div><div class="sl">APR /$100k</div></div><div class="stat"><div class="sv pos">2.60</div><div class="sl">Profit factor</div></div><div class="stat"><div class="sv pos">+1.49</div><div class="sl">Sharpe</div></div><div class="stat"><div class="sv ">62.9%</div><div class="sl">Win rate</div></div><div class="stat"><div class="sv pos">$195,800</div><div class="sl">Net P&L</div></div><div class="stat"><div class="sv neg">-9.9%</div><div class="sl">Max DD</div></div><div class="stat"><div class="sv ">+0.360R</div><div class="sl">Expectancy</div></div></div>
+      <div class="statgrid"><div class="stat"><div class="sv pos">+33.2%</div><div class="sl">APR /$100k</div></div><div class="stat"><div class="sv pos">2.60</div><div class="sl">Profit factor</div></div><div class="stat"><div class="sv pos">+1.49</div><div class="sl">Sharpe</div></div><div class="stat"><div class="sv ">62.9%</div><div class="sl">Win rate</div></div><div class="stat"><div class="sv pos">$195,800</div><div class="sl">Net P&L</div></div><div class="stat"><div class="sv neg">-9.9%</div><div class="sl">Max DD</div></div><div class="stat"><div class="sv ">+0.360R</div><div class="sl">Expectancy</div></div></div>
       <div class="muted small" style="margin-top:10px">
-        2021-01-07 → 2026-10-12 · 5.8y ·
-        186 trades · $195,800 on $100k = +196% total / +33.8%/yr · simulated
+        2021-01-07 → 2026-10-12 · 5.9y ·
+        186 trades · $195,800 on $100k = +196% total / +33.2%/yr · simulated
       </div>
     </div>
     
@@ -139,7 +139,7 @@
       <h2>Strategies A + B + C combined <span class="muted small">· NQ · the three backtests above, summed day by day</span></h2>
       <div class="statgrid wide"><div class="stat"><div class="sv pos">+76.8%</div><div class="sl">APR /$100k</div></div><div class="stat"><div class="sv pos">1.87</div><div class="sl">Profit factor</div></div><div class="stat"><div class="sv pos">+2.21</div><div class="sl">Sharpe</div></div><div class="stat"><div class="sv ">46.5%</div><div class="sl">Win rate</div></div><div class="stat"><div class="sv pos">$399,400</div><div class="sl">Net P&L</div></div><div class="stat"><div class="sv neg">-16.8%</div><div class="sl">Max DD</div></div><div class="stat"><div class="sv ">1,289</div><div class="sl">Trades</div></div></div>
       <div class="muted small" style="margin-top:10px">
-        2021-08-22 → 2026-11-13 · 5.2y = the window all three backtests cover ·
+        2021-08-22 → 2026-11-16 · 5.2y = the window all three backtests cover ·
         1,289 trades · $399,400 on $100k = +399% total / +76.8%/yr ·
         each strategy at its own card's size and measured costs · no margin limit modelled · simulated
       </div>
@@ -151,7 +151,7 @@
     <svg viewBox="0 0 900 300" width="100%" height="300" role="img"
          aria-label="Strategies A + B + C combined weekly account equity rising from $100k to about $499k over 2021 to 2026 at the three-strategy sum, each at its own card's size">
       <text x="10" y="20" font-size="12" fill="#8b949e">Account equity (USD) · $100k start · three-strategy sum, each at its own card's size</text>
-      <polyline fill="none" stroke="#58a6ff" stroke-width="2" points="50,275 53,275 56,274 59,274 62,274 65,274 68,274 71,273 74,274 77,273 80,273 83,273 86,273 89,273 92,273 95,273 98,272 101,268 104,267 107,266 110,267 113,267 116,266 119,265 122,262 125,258 128,257 131,259 134,260 137,258 140,258 143,257 146,258 149,256 152,252 155,252 158,252 161,247 164,246 167,238 170,236 173,233 176,231 179,231 182,233 185,231 188,231 191,231 194,230 197,230 200,225 203,225 206,227 209,225 212,221 215,222 218,217 221,218 224,219 227,218 230,216 233,217 236,213 239,213 242,211 245,213 248,212 251,212 254,212 257,210 260,209 263,208 266,210 269,210 272,210 275,212 278,211 281,210 284,211 287,211 290,208 293,207 296,207 299,207 302,207 305,206 308,205 311,205 314,205 317,203 320,203 323,202 326,202 329,202 332,203 335,203 338,202 341,202 344,203 347,203 350,203 353,203 356,202 359,203 362,204 365,201 368,200 371,201 374,200 377,201 380,201 383,199 386,200 389,199 392,199 395,198 398,196 401,196 404,196 407,197 410,196 413,195 416,195 419,194 422,195 425,193 428,193 431,192 434,191 437,191 440,191 443,191 446,191 449,189 452,189 455,190 458,190 462,190 465,190 468,189 471,188 474,189 477,189 480,189 483,189 486,189 489,187 492,187 495,187 498,188 501,187 504,187 507,186 510,182 513,181 516,181 519,179 522,181 525,181 528,177 531,176 534,173 537,172 540,173 543,171 546,171 549,171 552,171 555,171 558,171 561,171 564,172 567,172 570,172 573,172 576,171 579,170 582,169 585,170 588,170 591,167 594,168 597,165 600,162 603,164 606,166 609,158 612,156 615,155 618,150 621,123 624,126 627,115 630,116 633,116 636,116 639,115 642,112 645,112 648,112 651,109 654,109 657,109 660,109 663,109 666,109 669,109 672,110 675,109 678,108 681,109 684,109 687,109 690,109 693,110 696,107 699,107 702,108 705,108 708,107 711,107 714,107 717,103 720,101 723,102 726,100 729,103 732,102 735,99 738,99 741,100 744,100 747,101 750,95 753,94 756,94 759,94 762,90 765,89 768,83 771,77 774,80 777,81 780,73 783,72 786,72 789,67 792,65 795,65 798,66 801,60 804,54 807,55 810,54 813,52 816,54 819,58 822,55 825,58 828,50 831,50 834,51 837,50 840,49 843,50 846,49 849,45 852,45 855,46 858,47 861,47 864,48 867,51 870,53"/>
+      <polyline fill="none" stroke="#58a6ff" stroke-width="2" points="50,275 53,275 56,274 59,274 62,274 65,274 68,274 71,273 74,274 77,273 80,273 83,273 86,273 89,273 92,273 95,273 98,272 101,268 104,267 107,266 110,267 113,267 116,266 119,265 122,262 125,258 128,257 131,259 134,260 137,258 140,258 143,257 146,258 149,256 152,252 155,252 158,252 161,247 164,246 167,238 170,236 173,233 176,231 179,231 182,233 185,231 188,231 191,231 194,230 197,230 200,225 203,225 206,227 209,225 212,221 215,222 218,217 221,218 224,219 227,218 230,216 233,217 236,213 239,213 242,211 245,213 248,212 251,212 254,212 256,210 259,209 262,208 265,210 268,210 271,210 274,212 277,211 280,210 283,211 286,211 289,208 292,207 295,207 298,207 301,207 304,206 307,205 310,205 313,205 316,203 319,203 322,202 325,202 328,202 331,203 334,203 337,202 340,202 343,203 346,203 349,203 352,203 355,202 358,203 361,204 364,201 367,200 370,201 373,200 376,201 379,201 382,199 385,200 388,199 391,199 394,198 397,196 400,196 403,196 406,197 409,196 412,195 415,195 418,194 421,195 424,193 427,193 430,192 433,191 436,191 439,191 442,191 445,191 448,189 451,189 454,190 457,190 460,190 463,190 466,189 469,188 472,189 475,189 478,189 481,189 484,189 487,187 490,187 493,187 496,188 499,187 502,187 505,186 508,182 511,181 514,181 517,179 520,181 523,181 526,177 529,176 532,173 535,172 538,173 541,171 544,171 547,171 550,171 553,171 556,171 559,171 562,172 565,172 568,172 571,172 574,171 577,170 580,169 583,170 586,170 589,167 592,168 595,165 598,162 601,164 604,166 607,158 610,156 613,155 616,150 619,123 622,126 625,115 628,116 631,116 634,116 637,115 640,112 643,112 646,112 649,109 652,109 655,109 658,109 661,109 664,109 666,109 669,110 672,109 675,108 678,109 681,109 684,109 687,109 690,110 693,107 696,107 699,108 702,108 705,107 708,107 711,107 714,103 717,101 720,102 723,100 726,103 729,102 732,99 735,99 738,100 741,100 744,101 747,95 750,94 753,94 756,94 759,90 762,89 765,83 768,77 771,80 774,81 777,73 780,72 783,72 786,67 789,65 792,65 795,66 798,60 801,54 804,55 807,54 810,52 813,54 816,58 819,55 822,58 825,50 828,50 831,51 834,50 837,49 840,50 843,49 846,45 849,45 852,46 855,47 858,47 861,48 864,51 867,53 870,53"/>
       <line x1="50" y1="275" x2="870" y2="275" stroke="#30363d" stroke-dasharray="4 4"/>
       <text x="2" y="285" font-size="10" fill="#8b949e">$100k</text>
       <text x="2" y="251" font-size="10" fill="#8b949e">$150k</text>
@@ -164,10 +164,10 @@
       <text x="2" y="56" font-size="10" fill="#8b949e">$500k</text>
       <text x="50" y="296" font-size="10" fill="#8b949e">2021</text>
       <text x="107" y="296" font-size="10" fill="#8b949e">2022</text>
-      <text x="263" y="296" font-size="10" fill="#8b949e">2023</text>
-      <text x="422" y="296" font-size="10" fill="#8b949e">2024</text>
-      <text x="579" y="296" font-size="10" fill="#8b949e">2025</text>
-      <text x="735" y="296" font-size="10" fill="#8b949e">2026</text>
+      <text x="262" y="296" font-size="10" fill="#8b949e">2023</text>
+      <text x="421" y="296" font-size="10" fill="#8b949e">2024</text>
+      <text x="577" y="296" font-size="10" fill="#8b949e">2025</text>
+      <text x="732" y="296" font-size="10" fill="#8b949e">2026</text>
     </svg>
       </div>
     </div>
@@ -184,7 +184,7 @@
     </div>
 
   <footer>
-    Updated 2026-11-17 15:21 GMT. Auto-refreshes. Simulated paper-trading track record — not financial advice;
+    Updated 2026-11-17 16:51 GMT. Auto-refreshes. Simulated paper-trading track record — not financial advice;
     past performance does not indicate future results. Strategy logic, parameters and instruments selection
     are proprietary and intentionally omitted.<br>
     <a href="backtest.html" style="color:var(--blue)">Backtest detail →</a>
